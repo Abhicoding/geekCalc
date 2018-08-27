@@ -1,0 +1,28 @@
+{
+  "name": "geekcalc",
+  "version": "1.0.0",
+  "description": "A basic single page calculator using geekDOM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhicoding/geekCalc.git"
+  },
+  "keywords": [
+    "React",
+    "Clone",
+    "GeekDOM",
+    "Calculator"
+  ],
+  "author": "Abhishek Shingane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhicoding/geekCalc/issues"
+  },
+  "homepage": "https://github.com/Abhicoding/geekCalc#readme",
+  "dependencies": {
+    "geekdom": "github:Abhicoding/geekDOM#master"
+  }
+}
