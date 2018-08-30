@@ -3,10 +3,8 @@ import {render, h} from 'geekdom'
 
 const App = () => {
   return (
-    <h1>Hellow orld</h1>
+    <h1>Hello World</h1>
   )
 }
 
-module.hot.accept()
-
-render (<App/>, document.getElementById('root'))
+render(<App />, document.getElementById('root'))

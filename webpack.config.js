@@ -1,20 +1,16 @@
 const path = require('path')
 const webpack = require('webpack')
-
-const PUBLIC_PATH = path.join(__dirname, 'public')
-const BUILD_PATH = path.join(PUBLIC_PATH, 'build')
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = {
-  entry: ['webpack-dev-server/client?http://localhost:8080',
-  'webpack/hot/only-dev-server','./src/index.js'],
+  entry: './src/index.js',
   output: {
-  path:path.resolve(BUILD_PATH, 'build'),
-  publicPath: path.resolve(BUILD_PATH, 'build'),
-  filename: 'bundle.index.js'
+  path: path.resolve(__dirname, 'build'),
+  filename: 'bundle.index.js',
   },
+  watch: true,
   mode: 'development',
   devtool: 'cheap-eval-source-map',
-  plugins:[new webpack.HotModuleReplacementPlugin, new webpack.NamedModulesPlugin],
   module: {
     rules: [
       {
@@ -26,5 +22,11 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 8080,
+      server: {baseDir: ['build']}
+    })]
 }
