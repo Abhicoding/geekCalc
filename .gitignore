@@ -1,1 +1,3 @@
 node_modules
+build/fonts
+build/bundle.index.js
