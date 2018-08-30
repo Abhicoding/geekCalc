@@ -1,13 +1,20 @@
 const path = require('path')
+const webpack = require('webpack')
+
+const PUBLIC_PATH = path.join(__dirname, 'public')
+const BUILD_PATH = path.join(PUBLIC_PATH, 'build')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: ['webpack-dev-server/client?http://localhost:8080',
+  'webpack/hot/only-dev-server','./src/index.js'],
   output: {
-  path: path.resolve(__dirname, 'dist'),
+  path:path.resolve(BUILD_PATH, 'build'),
+  publicPath: path.resolve(BUILD_PATH, 'build'),
   filename: 'bundle.index.js'
   },
   mode: 'development',
   devtool: 'cheap-eval-source-map',
+  plugins:[new webpack.HotModuleReplacementPlugin, new webpack.NamedModulesPlugin],
   module: {
     rules: [
       {

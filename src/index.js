@@ -7,6 +7,6 @@ const App = () => {
   )
 }
 
-console.log(render)
+module.hot.accept()
 
-render (App(), document.getElementById('root'))
+render (<App/>, document.getElementById('root'))
