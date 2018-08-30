@@ -1,5 +1,6 @@
 // @jsx h
 import {render, h} from 'geekdom'
+import './components/initial.scss'
 
 const App = () => {
   return (

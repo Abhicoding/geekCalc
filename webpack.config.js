@@ -20,6 +20,18 @@ module.exports = {
         options: {
           presets: ['@babel/preset-react', '@babel/preset-env']
         }
+      },
+      {
+        test: /\.scss$/,
+        loader: 'style-loader!css-loader!sass-loader'
+      },
+      {
+        test: /\.ttf$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts/'
+        }
       }
     ]
   },
