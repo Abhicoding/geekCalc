@@ -4,7 +4,8 @@
   "description": "A basic single page calculator using geekDOM",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,13 @@
   "homepage": "https://github.com/Abhicoding/geekCalc#readme",
   "dependencies": {
     "geekdom": "github:Abhicoding/geekDOM#master"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.0",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
   }
 }
