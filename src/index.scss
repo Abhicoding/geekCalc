@@ -1,0 +1,37 @@
+body {
+  background-color: rgb(3, 59, 61);
+  color:rgb(0, 229, 255);
+  font-family: 'Montserrat-Bold';
+  font-size: 2rem;
+  src: url('../static/Montserrat-Bold.ttf');
+  text-align: center;
+  -webkit-text-stroke: 0.1rem;
+  -webkit-text-stroke-color: #F64FFF;
+  text-shadow: 0rem 0.25rem 0.4rem #F64FFF;
+}
+
+div.grid-container-450-one {
+  margin: 1rem;
+  justify-content: space-evenly;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); 
+  height: 100%;
+}
+
+div.item {
+  box-sizing: border-box;
+  float: left;
+  padding: 0.5rem;
+  border: 0.1rem solid;
+  border-radius: 0.4rem;
+  background-color: rgb(1, 30, 31);
+  box-shadow: 0 0 0.5rem #F64FFF;
+  text-align: justify;
+  h4 {
+    margin-top: 0%;
+    margin-bottom: 2%;
+  }
+ }
+
+
