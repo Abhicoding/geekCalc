@@ -1,6 +1,7 @@
 // @jsx h
 import {render, h, Component} from 'geekdom'
 
+import Button from './button.js'
 export default class App extends Component {
   constructor () {
     super()
@@ -145,22 +146,22 @@ export default class App extends Component {
         <h1 class='header'>GeekCalc</h1>
         <div class='screen'><div>{this.state.screen}</div></div>
         <div class='grid-container-50-half'>
-          <div class='item one' onClick={this.enterOne}>1</div>
-          <div class='item two' onClick={this.enterTwo}>2</div>
-          <div class='item three' onClick={this.enterThree}>3</div>
-          <div class='item plus' onClick={this.enterPlus}>+</div>
-          <div class='item four' onClick={this.enterFour}>4</div>
-          <div class='item five' onClick={this.enterFive}>5</div>
-          <div class='item six' onClick={this.enterSix}>6</div>
-          <div class='item minus' onClick={this.enterMinus}>-</div>
-          <div class='item seven' onClick={this.enterSeven}>7</div>
-          <div class='item eigth' onClick={this.enterEight}>8</div>
-          <div class='item nine' onClick={this.enterNine}>9</div>
-          <div class='item multiply' onClick={this.enterMultiply}>*</div>
-          <div class='item decimal' onClick={this.enterZero}>0</div>
-          <div class='item zero' onClick={this.enterEqual}>=</div>
-          <div class='item equal' onClick={this.enterDivide}>/</div>
-          <div class='item divide' onClick={this.enterClear}>C</div>
+          <Button class='item one' clickHandler={this.enterOne} value={1}/>
+          <Button class='item two' clickHandler={this.enterTwo} value={2}/>
+          <Button class='item three' clickHandler={this.enterThree} value={3}/>
+          <Button class='item plus' clickHandler={this.enterPlus} value={'+'}/>
+          <Button class='item four' clickHandler={this.enterFour} value={4}/>
+          <Button class='item five' clickHandler={this.enterFive} value={5}/>
+          <Button class='item six' clickHandler={this.enterSix} value={6}/>
+          <Button class='item minus' clickHandler={this.enterMinus} value={'-'}/>
+          <Button class='item seven' clickHandler={this.enterSeven} value={7}/>
+          <Button class='item eight' clickHandler={this.enterEight} value={8}/>
+          <Button class='item nine' clickHandler={this.enterNine} value={9}/>
+          <Button class='item multiply' clickHandler={this.enterMultiply} value={'*'}/>
+          <Button class='item zero' clickHandler={this.enterZero} value={0}/>
+          <Button class='item equal' clickHandler={this.enterEqual} value={'='}/>
+          <Button class='item clear' clickHandler={this.enterClear} value={'C'}/>
+          <Button class='item divide' clickHandler={this.enterDivide} value={'/'}/>
         </div>
       </div>
     )
