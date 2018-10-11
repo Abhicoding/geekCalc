@@ -78,3 +78,16 @@ div.item:active {
   100% {
     opacity: 1;
     transform: scale(1) } }
+
+.footer {
+  color:rgb(0, 229, 255);
+  font-family: 'Montserrat-Bold';
+  font-size: 3rem;
+  text-align: center;
+  -webkit-text-stroke: 0.1rem;
+  -webkit-text-stroke-color: #F64FFF;
+  text-shadow: 0rem 0.25rem 0.4rem #F64FFF;
+  a {
+    text-decoration: none;
+  }
+}
